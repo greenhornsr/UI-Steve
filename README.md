@@ -19,7 +19,7 @@
 
 # PROJECT - MENTOR-ME
 ## MENTOR-ME Description
-Big boss wants us to create a marketing landing page that uses thematic color schemes(see ###Primary colors).  The Mentor-Me landing page should be the primary marketing location to inform, convince, and empower prospective entreprenuerial users to register.
+Big boss wants us to create a marketing landing page that uses thematic color schemes(see ###Primary colors).  The Mentor-Me landing page should be the primary marketing location to inform, convince, and empower prospective entreprenuerial users to register.  Page should link to a second page; an about page with team member info, pictures, etc.  Site should also incorporate the use of components and a class constructor. 
 
 ## Primary colors: 
 Darker blue color:   rgb(85, 116, 247);
