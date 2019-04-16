@@ -1,23 +1,45 @@
 .header{
     width: 80%;
     display: flex;
+    @media @phone{
+        width: 100%;
+    }
     }
     .nav{
         width: 98%;
+        @media @phone{
+            width: 100%;
+        }
         nav{
             width: 90%;
             padding: 1.5rem;
             margin-bottom: 2rem;
             display: flex;
             justify-content: center; 
-            border-bottom: 2px dashed black;   
+            border-bottom: 2px dashed black;
+            @media @phone{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                // border: @standard-border;
+            }   
             a{
                 text-decoration: none;
                 color: white;
                 padding: .2rem;
+                @media @phone{
+                    width: 100%;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 2.8rem;
+                    border: @mobile-border;
+                }
             }
             a:hover{
                 background-color: black;
+                color: @mm-theme-lightblue;
+                border: @standard-border;
             }
         }
     }
