@@ -7,6 +7,9 @@
     flex-direction: column;
     justify-content: center;
     // border: @standard-border;
+    @media @tablet {
+        margin: 0 4rem 0 0;
+    }
     @media @phone{
         width: 100%;
         height: auto;
@@ -53,6 +56,10 @@
     background-color: white;
     border: 3px solid black;
     border-radius: 10%;
+    @media @tablet{
+        // background-color: yellow;
+        font-size: .8rem;
+    }
     @media @phone{
         font-size: 1rem;
         width: 50%;
