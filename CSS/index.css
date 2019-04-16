@@ -51,7 +51,7 @@
 }
 .center-button {
   font-size: 1.5rem;
-  padding: 5px;
+  padding: 0.2rem;
   margin-bottom: 0.5rem;
   width: 20%;
   background-color: white;
@@ -111,7 +111,9 @@
   }
 }
 .nav nav a {
+  width: 8rem;
   text-decoration: none;
+  text-align: center;
   color: white;
   padding: 0.2rem;
 }
@@ -230,4 +232,40 @@ body {
     line-height: 1rem;
     padding: 0;
   }
+}
+.about-c-cont {
+  width: 80%;
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.about-c-cont .tmem {
+  width: 45%;
+  height: 45%;
+  background-color: black;
+  color: white;
+}
+.about-c-cont .tmem .tmem-content {
+  display: flex;
+  align-items: center;
+}
+.about-c-cont .tmem .tmem-content .about-img {
+  width: 45%;
+  text-align: center;
+  padding: 2em 0;
+}
+.about-c-cont .tmem .tmem-content .about-img img {
+  width: 70%;
+}
+.about-c-cont .tmem .tmem-content .about-descript {
+  width: 45%;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+.about-c-cont .tmem h2 {
+  width: 100%;
+  height: 4rem;
+  padding: 2rem;
+  text-align: center;
 }
