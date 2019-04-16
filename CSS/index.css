@@ -121,6 +121,17 @@
   text-align: center;
   background-color: yellow;
 }
+@media (max-width: 500px) {
+  .footer {
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .icons {
+    padding-bottom: 1rem;
+  }
+}
 * {
   max-width: 1200px;
   box-sizing: border-box;
