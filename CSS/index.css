@@ -209,7 +209,6 @@ body {
 }
 .primary-content .center-content .mm-logo img:last-child {
   width: 50%;
-  opacity: 0.5;
   mix-blend-mode: color-burn;
 }
 @media (max-width: 500px) {
