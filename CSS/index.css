@@ -66,6 +66,7 @@
 @media (max-width: 500px) {
   .header {
     width: 100%;
+    display: none;
   }
 }
 .nav {
@@ -78,6 +79,7 @@
 }
 .nav nav {
   width: 90%;
+  height: 80px;
   padding: 1.5rem;
   margin-bottom: 2rem;
   display: flex;
@@ -177,10 +179,28 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  margin-left: 3.5rem;
 }
 .primary-content .center-content .mm-logo img {
   mix-blend-mode: multiply;
-  width: 60%;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .primary-content .center-content .mm-logo img {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+  }
+}
+.primary-content .center-content .mm-logo img:last-child {
+  width: 50%;
+  opacity: 0.5;
+  mix-blend-mode: color-burn;
+}
+@media (max-width: 500px) {
+  .primary-content .center-content .mm-logo img:last-child {
+    display: none;
+  }
 }
 .primary-content .center-content p {
   margin-bottom: 1rem;
