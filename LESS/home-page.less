@@ -39,6 +39,7 @@ body {
         width: 80%;
         height: 100%;
         display: flex;
+        margin-left: 11rem; //just added margin to compensate for fixed buttons
         flex-direction: column;
         justify-content: center;
         // background-image: url('../assets/business-people-bckgrnd-lrg.jpeg');
@@ -48,6 +49,12 @@ body {
         // background-size: 90%;
         // background-position-x: 2.5rem;
         // border: @standard-border;
+        @media @tablet{
+            margin-left: 0;
+        }
+        @media @phone{
+            margin: 0;
+        }
         .mm-logo{
             display: flex;
             align-items: center;
