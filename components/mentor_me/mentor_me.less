@@ -1,25 +1,62 @@
-.circle-navs{
-    cursor: pointer;
-    &:hover{
-        border: 2px solid red;
+.mm-page-content{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    // border: @standard-border;
+}
+
+.button-navs{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    border-radius: 50%;
+    background-color: @mm-theme-lightblue;
+    text-align: center;
+    @media @phone{
+        width: 3rem;
+        height: 3rem;
+        margin: 0;
+    }
+    img{
+        width: 50%;
+        @media @phone{
+            width: 35%;
+        }
+    }
+    p{
+        font-size: .5rem;
+        @media @phone{
+            font-size: .4rem;
+            font-weight: bold;
+        }
     }
 }
 
+.rel-button-selected{
+    cursor: pointer;
+    border: 2px solid red;
+    background-color: @mm-button-select;
+}
+
 .mm-primary-content{
-    width: 55%;
+    width: 60%;
     height: 500px;
-    position: fixed;
-    right: 20rem;
-    left: 20rem;
-    bottom: 8rem;
-    top: 8rem;
+    margin-left: 15rem;
     background-color: white;
     border: 2rem groove @mm-theme-blue;
+    // border: @standard-border;
     // display: none;
 }
 
 .site-info{
     display: none;
+    h2{
+        text-align: center;
+    }
 }
 
 .show-MM-content{
@@ -32,20 +69,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
-    left: 35.5rem;
-    bottom: 2rem;
     // border: @standard-border;
     .access-buttons{
         width: 9rem;
         height: 3rem;
         background-color: @mm-theme-blue;
+        &:hover{
+            background-color: @mm-button-select;
+            color: black;
+        }
         a{
             text-decoration: none;
             color: white;
-        }
-        &:hover{
-            background-color: black;
         }
     }
 }
