@@ -5,16 +5,16 @@
 
 // animations
 .colorChange-animation{
-    animation: colorChange .8s linear 5s infinite alternate-reverse;
+    animation: colorChange .8s ease 5s infinite alternate-reverse;
     @keyframes colorChange {
     from {color: white;}
     to {color: black;}
   }
 }
 .rotation-animation{
-    animation: rotation 3s linear 3s infinite alternate-reverse;
+    animation: rotation 3s ease 3s infinite alternate-reverse;
     @keyframes rotation {
-    from {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);}
     to {transform: rotateY(360deg);}
   }
 }
