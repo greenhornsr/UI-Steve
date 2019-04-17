@@ -1,11 +1,21 @@
+// gradients
 .mm-gradient{
     background-image: linear-gradient(to right, rgb(85, 116, 247), rgb(96, 195, 255));
 }
 
+// animations
 .colorChange-animation{
+    animation: colorChange .8s linear 5s infinite alternate-reverse;
     @keyframes colorChange {
     from {color: white;}
-    to {color: red;}
+    to {color: black;}
+  }
+}
+.rotation-animation{
+    animation: rotation 3s linear 3s infinite alternate-reverse;
+    @keyframes rotation {
+    from {transform: rotateY(180deg);}
+    to {transform: rotateY(360deg);}
   }
 }
 
