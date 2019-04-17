@@ -6,35 +6,61 @@
     justify-content: flex-start;
     margin: 0;
     // border: @standard-border;
+    @media @phone {
+        height: auto;
+        flex-wrap: wrap;
+    }
 }
 
-.button-navs{
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-bottom: 1rem;
-    margin-right: 5rem;
-    border-radius: 50%;
-    background-color: @mm-theme-lightblue;
-    text-align: center;
+.mm-nav-buttons{
+    width: 10%;
+    height: 100%;
+    margin-left: 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: @standard-border;
+    @media @tablet {
+        margin-right: 4rem;
+        padding: 0;
+    }
     @media @phone{
-        width: 3rem;
-        height: 3rem;
-        margin: 0;
+        width: 10%;
+        height: 22rem;
+        margin: .5rem;
+        justify-content: space-between;
+        // border: @standard-border;
     }
-    img{
-        width: 50%;
+    .button-navs{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        background-color: @mm-theme-lightblue;
+        text-align: center;
         @media @phone{
-            width: 35%;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0;
         }
-    }
-    p{
-        font-size: .5rem;
-        @media @phone{
-            font-size: .4rem;
-            font-weight: bold;
+        img{
+            width: 50%;
+            @media @phone{
+                width: 35%;
+            }
+        }
+        p{
+            font-size: .5rem;
+            @media @phone{
+                font-size: .4rem;
+                font-weight: bold;
+            }
         }
     }
 }
+
+
 
 .rel-button-selected{
     cursor: pointer;
@@ -42,18 +68,24 @@
     background-color: @mm-button-select;
 }
 
+
 .mm-primary-content{
-    width: 60%;
     height: 500px;
-    margin-left: 15rem;
+    margin-left: 5rem;
     background-color: white;
     border: 2rem groove @mm-theme-blue;
     // border: @standard-border;
     // display: none;
     @media @tablet {
+        width: 50%;
         overflow: auto;
         margin: 0;
-        font-size: .8rem;
+        font-size: .73rem;
+    }
+    @media @phone {
+        width: 80%;
+        margin-top: 1rem;
+        border: .8rem groove @mm-theme-blue;
     }
 }
 
@@ -72,14 +104,28 @@
 .register-login{
     width: 15%;
     height: 10rem;
+    margin-left: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     // border: @standard-border;
+    @media @tablet {
+        margin-left: 2rem;
+    }
+    @media @phone{
+        width: 80%;
+        margin-left: 3.5rem;
+        justify-content: center;
+        align-items: center;
+    }
     .access-buttons{
         width: 9rem;
         height: 3rem;
+        margin-right: 1rem;
         background-color: @mm-theme-blue;
+        @media @phone{
+            margin: .5rem 0;
+        }
         &:hover{
             background-color: @mm-button-select;
             color: black;

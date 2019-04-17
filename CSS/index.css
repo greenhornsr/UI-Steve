@@ -171,35 +171,63 @@
   justify-content: flex-start;
   margin: 0;
 }
-.button-navs {
+@media (max-width: 500px) {
+  .mm-page-content {
+    height: auto;
+    flex-wrap: wrap;
+  }
+}
+.mm-nav-buttons {
+  width: 10%;
+  height: 100%;
+  margin-left: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .mm-nav-buttons {
+    margin-right: 4rem;
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  .mm-nav-buttons {
+    width: 10%;
+    height: 22rem;
+    margin: 0.5rem;
+    justify-content: space-between;
+  }
+}
+.mm-nav-buttons .button-navs {
   width: 3.5rem;
   height: 3.5rem;
   margin-bottom: 1rem;
-  margin-right: 5rem;
   border-radius: 50%;
   background-color: #60c3ff;
   text-align: center;
 }
 @media (max-width: 500px) {
-  .button-navs {
-    width: 3rem;
-    height: 3rem;
+  .mm-nav-buttons .button-navs {
+    width: 2.5rem;
+    height: 2.5rem;
     margin: 0;
   }
 }
-.button-navs img {
+.mm-nav-buttons .button-navs img {
   width: 50%;
 }
 @media (max-width: 500px) {
-  .button-navs img {
+  .mm-nav-buttons .button-navs img {
     width: 35%;
   }
 }
-.button-navs p {
+.mm-nav-buttons .button-navs p {
   font-size: 0.5rem;
 }
 @media (max-width: 500px) {
-  .button-navs p {
+  .mm-nav-buttons .button-navs p {
     font-size: 0.4rem;
     font-weight: bold;
   }
@@ -210,17 +238,24 @@
   background-color: lightgreen;
 }
 .mm-primary-content {
-  width: 60%;
   height: 500px;
-  margin-left: 15rem;
+  margin-left: 5rem;
   background-color: white;
   border: 2rem groove #5574f7;
 }
 @media (max-width: 800px) {
   .mm-primary-content {
+    width: 50%;
     overflow: auto;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.73rem;
+  }
+}
+@media (max-width: 500px) {
+  .mm-primary-content {
+    width: 80%;
+    margin-top: 1rem;
+    border: 0.8rem groove #5574f7;
   }
 }
 .site-info {
@@ -236,14 +271,34 @@
 .register-login {
   width: 15%;
   height: 10rem;
+  margin-left: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 800px) {
+  .register-login {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .register-login {
+    width: 80%;
+    margin-left: 3.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .register-login .access-buttons {
   width: 9rem;
   height: 3rem;
+  margin-right: 1rem;
   background-color: #5574f7;
+}
+@media (max-width: 500px) {
+  .register-login .access-buttons {
+    margin: 0.5rem 0;
+  }
 }
 .register-login .access-buttons:hover {
   background-color: lightgreen;
