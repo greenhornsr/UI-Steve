@@ -53,12 +53,9 @@
 }
 
 
-
-
 .about-c-cont{
     width: 80%;
     height: 550px;
-    // margin-left: 11rem;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -69,7 +66,7 @@
     @media @phone {
         width: 100%;
         height: auto;
-        margin: 0;
+        margin: 3rem 0;
         flex-direction: column;
         flex-wrap: nowrap;
         // align-content: inherit;
@@ -79,13 +76,14 @@
         height: 45%;
         background-color: black;
         color: white;   
-        // border: @standard-border;
+        // display: none;
+        border: 3px inset gold;
         @media @tablet {
             height: 30%;
          }
         @media @phone{
             width: 95%;
-            height: auto;
+            height: 12rem;
             margin: .5rem;
         }
         .tmem-content{
@@ -101,21 +99,24 @@
                     width: 42%;
                     height: 8rem;
                     margin-bottom: .4rem;
+                    padding: .2rem;
                 }
                 img{
                     width: 70%;
-                    .rotation-animation;
-                    // .rotation-animation;
+                    .rotation-animation();
+                    // border: @standard-border;
                     @media @tablet {
-                        width: 40%;
+                        width: 70%;
+                        margin-top: 1rem;
                     }
                 }
             }
             .about-descript{
                 width: 45%;
-                line-height: 2rem;
+                line-height: 1.5rem;
                 font-size: .8rem;
                 padding: .2rem;
+                overflow: auto;
                 // border: @standard-border;
                 @media @tablet {
                     width: 55%;
@@ -125,6 +126,10 @@
                 }
                 @media @phone {
                     line-height: 1.9rem;
+                }
+                span{
+                    font-weight: bold;
+                    color: @mm-theme-lightblue;
                 }
             }
         }
@@ -143,6 +148,15 @@
 
     }
 }
+
+// .tmem-hide{
+//     display: none;
+// }
+
+.tmem-show{
+    display: block;
+}
+
 .footer{
     padding-top: .5rem;
 }
