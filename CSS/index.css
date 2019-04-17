@@ -216,7 +216,15 @@
   background-color: white;
   border: 2rem groove #5574f7;
 }
+@media (max-width: 800px) {
+  .mm-primary-content {
+    overflow: auto;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
 .site-info {
+  margin: 1rem;
   display: none;
 }
 .site-info h2 {

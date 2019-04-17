@@ -50,9 +50,15 @@
     border: 2rem groove @mm-theme-blue;
     // border: @standard-border;
     // display: none;
+    @media @tablet {
+        overflow: auto;
+        margin: 0;
+        font-size: .8rem;
+    }
 }
 
 .site-info{
+    margin: 1rem;
     display: none;
     h2{
         text-align: center;
