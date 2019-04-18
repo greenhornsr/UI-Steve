@@ -11,6 +11,10 @@
         h1{
             line-height: 4rem;
             color: white;
+            @media @tablet{
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
         }
         .pn-nav-buttons{
             width: 4rem;
@@ -20,6 +24,9 @@
             font-size: 2rem;
             font-weight: bold;
             border-radius: 50%;
+            @media @tablet{
+                display: none;
+            }
             &:hover{
                 background-color: @mm-button-select;
                 border: .2rem solid black;
@@ -49,15 +56,19 @@
     // border: @standard-border;
     .dot {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
+        width: 10rem;
+        height: 6rem;
         margin: 0 .1rem;
+        padding-top: 1rem;
         background-color: white;
-        border-radius: 50%;
+        // border-radius: 50%;
         display: inline-block;
         &:hover{
             background-color: @mm-button-select;
             .bkgrnd-color-transition();
+        }
+        img{
+            width: 100%;
         }
     }
     .dot:first-child{
