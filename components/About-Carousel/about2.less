@@ -1,7 +1,33 @@
 .about2-prim-content{
     width: 100%;
     margin-bottom: 2rem;
+    margin-top: -1.5rem;
     // border: 1px solid red;  
+    .profile-navs{
+        width: 80%;
+        margin-bottom: .5rem;
+        display: flex;
+        // border: @standard-border;
+        h1{
+            line-height: 4rem;
+            color: white;
+        }
+        .pn-nav-buttons{
+            width: 4rem;
+            height: 4rem;
+            background-color: black;
+            color: red;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 50%;
+            &:hover{
+                background-color: @mm-button-select;
+                border: .2rem solid black;
+                color: @mm-theme-blue;
+                .bkgrnd-color-transition();
+            }
+        }
+    }
 }
 
 .about2-c-cont{
@@ -12,7 +38,31 @@
     flex-wrap: wrap;
     align-content: space-around;
     border: 4rem ridge gold;
-    // display: none;
+}
+
+
+// dots below profile image - used to depict which profile is active, can also be used for navigating to an associated profile.
+.nav-dots{
+    width: 80%;
+    margin-top: 1rem;
+    text-align: center;
+    // border: @standard-border;
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 .1rem;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        &:hover{
+            background-color: @mm-button-select;
+            .bkgrnd-color-transition();
+        }
+    }
+    .dot:first-child{
+        background-color: green;
+    }
 }
 
 .prime-images{
@@ -27,23 +77,22 @@
     background-size: 62.5%;
     // background-repeat: no-repeat;
     color: black;   
-    // display: none;
-    border: 3px inset gold;
+    display: none;
+    // border: 3px inset gold;
     .t-mem-name{
         width: 100%;
-            height: 5rem;
-            padding: .5rem;
+            height: 3.1rem;
+            // padding: .5rem;
             display: flex;
-            // line-height: 0rem;
-            // text-align: center;
+            // border-bottom: 5px solid black;
             // border: @standard-border;
             .div-img{
                 width: 10%;
                 text-align: center;
-                padding-top: .4rem;
+                padding-top: .3rem;
                 // border: @standard-border;
                 img{
-                    width: 60%; 
+                    width: 50%; 
                     mix-blend-mode: normal;
                     .rotation-animation();
                 }
@@ -51,7 +100,7 @@
             .div-h2{
                 width: 85%;
                 text-align: center;
-                line-height: 4rem;
+                line-height: 3rem;
                 font-weight: bold;
                 // border: @standard-border;
             }
@@ -59,6 +108,7 @@
     }
 
     .tmem-content{
+        height: 18rem;
         display: flex;
         align-items: center;
         // border: @standard-border;
@@ -66,6 +116,8 @@
             width: 35%;
             text-align: center;  
             padding: .5rem 0;
+            // opacity: 0;
+            .fade-animation();
             // border: @standard-border;
             @media @tablet{
                 width: 42%;
@@ -84,10 +136,11 @@
             }
         }
         .about-descript{
-            width: 45%;
-            line-height: 1.5rem;
-            font-size: .8rem;
-            padding: .2rem;
+            width: 50%;
+            height: 80%;
+            line-height: 2rem;
+            font-size: 1rem;
+            padding: 3rem .5rem 0rem 1rem;
             overflow: auto;
             // border: @standard-border;
             span{

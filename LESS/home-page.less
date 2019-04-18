@@ -66,6 +66,7 @@ body {
                 mix-blend-mode: multiply;
                 // mix-blend-mode: difference;
                 width: 30%;
+                // .rotation-animation();
                 @media @phone {
                     width: 80%;
                     padding: 0;
@@ -100,3 +101,33 @@ body {
         }
     }
 } 
+
+// START movement animation testing
+/* BLINKING-LIGHT BUILD */
+.blink-block{
+    width: 45rem;
+    height: 15rem;
+    padding: 0;
+    display: flex;
+    background-color: white;
+    border: 1px solid silver; 
+    .blink-storage{
+        width: 50%;
+        height: 100%;
+        border: @standard-border;
+        .blinking {
+            width: 50px;
+            height: 71px;
+            /* margin: 20px; */
+            // transform: scale(.8,.8);
+            border: 1px solid red;
+            background-image: url("../assets/sprites/light-bulb-on-off-sprite-2.jpg");
+            animation: blink 1s steps(2) infinite;
+            @keyframes blink {
+                from { background-position:    0px; }
+                to { background-position: -100px; }
+            }
+        }
+    }
+}
+/*blinking-light END*/

@@ -334,7 +334,7 @@
   }
 }
 .rotation-animation {
-  animation: rotation 3s ease 3s infinite alternate-reverse;
+  animation: rotation 2s linear 2s infinite normal;
 }
 @keyframes rotation {
   from {
@@ -343,6 +343,21 @@
   to {
     transform: rotateY(360deg);
   }
+}
+.fade-animation {
+  animation: fade 4s linear 0s 1 normal;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bkgrnd-color-transition {
+  transition: background-color 3s ease, /* transition 1 (comma seperated) */ color 3s ease;
+  /* transition 2 */
 }
 .footer {
   width: 100%;
@@ -459,6 +474,37 @@ body {
     padding: 0;
   }
 }
+/* BLINKING-LIGHT BUILD */
+.blink-block {
+  width: 45rem;
+  height: 15rem;
+  padding: 0;
+  display: flex;
+  background-color: white;
+  border: 1px solid silver;
+}
+.blink-block .blink-storage {
+  width: 50%;
+  height: 100%;
+  border: 1px solid red;
+}
+.blink-block .blink-storage .blinking {
+  width: 50px;
+  height: 71px;
+  /* margin: 20px; */
+  border: 1px solid red;
+  background-image: url("../assets/sprites/light-bulb-on-off-sprite-2.jpg");
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+/*blinking-light END*/
 .about-prim-content {
   width: 100%;
   height: 550px;
@@ -579,7 +625,7 @@ body {
 }
 .about-c-cont .tmem .tmem-content .about-img img {
   width: 70%;
-  animation: rotation 3s ease 3s infinite alternate-reverse;
+  animation: rotation 2s linear 2s infinite normal;
 }
 @keyframes rotation {
   from {
@@ -641,6 +687,32 @@ body {
 .about2-prim-content {
   width: 100%;
   margin-bottom: 2rem;
+  margin-top: -1.5rem;
+}
+.about2-prim-content .profile-navs {
+  width: 80%;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.about2-prim-content .profile-navs h1 {
+  line-height: 4rem;
+  color: white;
+}
+.about2-prim-content .profile-navs .pn-nav-buttons {
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.about2-prim-content .profile-navs .pn-nav-buttons:hover {
+  background-color: lightgreen;
+  border: 0.2rem solid black;
+  color: #5574f7;
+  transition: background-color 3s ease, /* transition 1 (comma seperated) */ color 3s ease;
+  /* transition 2 */
 }
 .about2-c-cont {
   width: 80%;
@@ -650,6 +722,28 @@ body {
   flex-wrap: wrap;
   align-content: space-around;
   border: 4rem ridge gold;
+}
+.nav-dots {
+  width: 80%;
+  margin-top: 1rem;
+  text-align: center;
+}
+.nav-dots .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 0.1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.nav-dots .dot:hover {
+  background-color: lightgreen;
+  transition: background-color 3s ease, /* transition 1 (comma seperated) */ color 3s ease;
+  /* transition 2 */
+}
+.nav-dots .dot:first-child {
+  background-color: green;
 }
 .prime-images {
   display: none;
@@ -661,23 +755,22 @@ body {
   background-color: white;
   background-size: 62.5%;
   color: black;
-  border: 3px inset gold;
+  display: none;
 }
 .tmem2 .t-mem-name {
   width: 100%;
-  height: 5rem;
-  padding: 0.5rem;
+  height: 3.1rem;
   display: flex;
 }
 .tmem2 .t-mem-name .div-img {
   width: 10%;
   text-align: center;
-  padding-top: 0.4rem;
+  padding-top: 0.3rem;
 }
 .tmem2 .t-mem-name .div-img img {
-  width: 60%;
+  width: 50%;
   mix-blend-mode: normal;
-  animation: rotation 3s ease 3s infinite alternate-reverse;
+  animation: rotation 2s linear 2s infinite normal;
 }
 @keyframes rotation {
   from {
@@ -690,10 +783,11 @@ body {
 .tmem2 .t-mem-name .div-h2 {
   width: 85%;
   text-align: center;
-  line-height: 4rem;
+  line-height: 3rem;
   font-weight: bold;
 }
 .tmem2 .tmem-content {
+  height: 18rem;
   display: flex;
   align-items: center;
 }
@@ -701,6 +795,15 @@ body {
   width: 35%;
   text-align: center;
   padding: 0.5rem 0;
+  animation: fade 4s linear 0s 1 normal;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media (max-width: 800px) {
   .tmem2 .tmem-content .about-img {
@@ -721,10 +824,11 @@ body {
   }
 }
 .tmem2 .tmem-content .about-descript {
-  width: 45%;
-  line-height: 1.5rem;
-  font-size: 0.8rem;
-  padding: 0.2rem;
+  width: 50%;
+  height: 80%;
+  line-height: 2rem;
+  font-size: 1rem;
+  padding: 3rem 0.5rem 0rem 1rem;
   overflow: auto;
 }
 .tmem2 .tmem-content .about-descript span {

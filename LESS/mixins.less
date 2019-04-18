@@ -9,13 +9,27 @@
     @keyframes colorChange {
     from {color: white;}
     to {color: black;}
-  }
+    }
 }
+
 .rotation-animation{
-    animation: rotation 3s ease 3s infinite alternate-reverse;
+    animation: rotation 2s linear 2s infinite normal;
     @keyframes rotation {
     from {transform: rotateY(0deg);}
     to {transform: rotateY(360deg);}
-  }
+    }
 }
 
+.fade-animation{
+    animation: fade 4s linear 0s 1 normal;
+    @keyframes fade {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+    }
+}
+
+.bkgrnd-color-transition{
+    transition:  
+    background-color 3s ease, /* transition 1 (comma seperated) */
+    color 3s ease; /* transition 2 */
+}
