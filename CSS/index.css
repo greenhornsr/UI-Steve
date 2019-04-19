@@ -370,6 +370,10 @@
     line-height: 0.8rem;
   }
 }
+.footer a {
+  text-decoration: none;
+  color: black;
+}
 @media (max-width: 500px) {
   .icons {
     padding-bottom: 1rem;
