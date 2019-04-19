@@ -1,0 +1,35 @@
+// gradients
+.mm-gradient{
+    background-image: linear-gradient(to right, rgb(85, 116, 247), rgb(96, 195, 255));
+}
+
+// animations
+.colorChange-animation{
+    animation: colorChange .8s ease 3s infinite alternate-reverse;
+    @keyframes colorChange {
+    from {color: white;}
+    to {color: black;}
+    }
+}
+
+.rotation-animation{
+    animation: rotation 2s linear 2s infinite normal;
+    @keyframes rotation {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+    }
+}
+
+.fade-animation{
+    animation: fade 4s linear 0s 1 normal;
+    @keyframes fade {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+    }
+}
+
+.bkgrnd-color-transition{
+    transition:  
+    background-color 3s ease, /* transition 1 (comma seperated) */
+    color 3s ease; /* transition 2 */
+}

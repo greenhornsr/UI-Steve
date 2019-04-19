@@ -1,0 +1,140 @@
+.mm-page-content{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    // border: @standard-border;
+    @media @phone {
+        height: auto;
+        flex-wrap: wrap;
+    }
+}
+
+.mm-nav-buttons{
+    width: 10%;
+    height: 100%;
+    margin-left: 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: @standard-border;
+    @media @tablet {
+        margin-right: 4rem;
+        padding: 0;
+    }
+    @media @phone{
+        width: 10%;
+        height: 22rem;
+        margin: .5rem;
+        justify-content: space-between;
+        // border: @standard-border;
+    }
+    .button-navs{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        background-color: @mm-theme-lightblue;
+        text-align: center;
+        @media @phone{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0;
+        }
+        img{
+            width: 50%;
+            @media @phone{
+                width: 35%;
+            }
+        }
+        p{
+            font-size: .5rem;
+            @media @phone{
+                font-size: .4rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+
+.rel-button-selected{
+    cursor: pointer;
+    border: 2px solid red;
+    background-color: @mm-button-select;
+}
+
+
+.mm-primary-content{
+    height: 500px;
+    margin-left: 5rem;
+    background-color: white;
+    border: 2rem groove @mm-theme-blue;
+    overflow: auto;
+    // border: @standard-border;
+    // display: none;
+    @media @tablet {
+        width: 50%;
+        overflow: auto;
+        margin: 0;
+        font-size: .73rem;
+    }
+    @media @phone {
+        width: 80%;
+        margin-top: 1rem;
+        border: .8rem groove @mm-theme-blue;
+    }
+}
+
+.site-info{
+    margin: 1rem;
+    display: none;
+    font-family: 'Dokdo', cursive;
+    h2{
+        text-align: center;
+    }
+}
+
+.show-MM-content{
+    display: block;
+}
+
+.register-login{
+    width: 15%;
+    height: 10rem;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // border: @standard-border;
+    @media @tablet {
+        margin-left: 2rem;
+    }
+    @media @phone{
+        width: 80%;
+        margin-left: 3.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .access-buttons{
+        width: 9rem;
+        height: 3rem;
+        margin-right: 1rem;
+        background-color: @mm-theme-blue;
+        @media @phone{
+            margin: .5rem 0;
+        }
+        &:hover{
+            background-color: @mm-button-select;
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
