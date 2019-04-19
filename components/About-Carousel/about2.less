@@ -18,12 +18,19 @@
             width: 90%;
             height: 10%;
         }
+        @media @phone{
+            width: 100%;
+            margin: 0;
+        }
         h1{
             line-height: 4rem;
             color: white;
             @media @tablet{
                 margin-top: .5rem;
                 font-size: 1.5rem;
+            }
+            @media @phone{
+                font-size: 1rem;
             }
         }
         .pn-nav-buttons{
@@ -34,6 +41,7 @@
             font-size: 2rem;
             font-weight: bold;
             border-radius: 50%;
+            user-select: none;
             @media @tablet{
                 display: none;
             }
@@ -53,6 +61,10 @@
             @media @tablet{
                 display: block;
             }
+            @media @phone{
+                margin-top: 1rem;
+                .rotation-animation();
+            }
         }
     }
 }
@@ -70,6 +82,10 @@
         height: 30rem;
         margin: 0 2.5rem;
         border: 2rem ridge gold;
+    }
+    @media @phone{
+        width: 80%;
+        margin: 2.5%;
     }
 }
 
@@ -96,7 +112,11 @@
         width: 70%;
         height: 60%;
         background-size: 100%;
-        // background-repeat: no-repeat;
+    }
+    @media @phone{
+        height: 80%;
+        background-size: 226%;
+        background-repeat: no-repeat;
     }
     .t-mem-name{
         width: 100%;
@@ -104,7 +124,7 @@
             // padding: .5rem;
             display: flex;
             // border-bottom: 5px solid black;
-            // border: @standard-border;
+            // border: @standard-border;    
             @media @tablet{
                 height: 15%;
             }
@@ -113,13 +133,16 @@
                 text-align: center;
                 padding-top: .3rem;
                 // border: @standard-border;
+                @media @phone{
+                    display: none;
+                }
                 img{
                     width: 50%; 
                     mix-blend-mode: normal;
                     .rotation-animation();
                 }
                 @media @tablet {
-                    padding-top: .5rem;
+                    padding-top: .8rem;
                 }
             }
             .div-h2{
@@ -131,7 +154,10 @@
                 // color: white;
                 // border: @standard-border;
                 @media @tablet{
-                    line-height: 2.1rem;
+                    line-height: 2.7rem;
+                }
+                @media @phone{
+                    line-height: 3rem;
                 }
             }
 
@@ -146,6 +172,9 @@
             height: 85%;
             align-items: space-around;
         }
+        @media @phone{
+            flex-direction: column;
+        }
         .about-img{
             width: 35%;
             text-align: center;  
@@ -158,7 +187,9 @@
                 height: 70%;
                 margin: 0rem;
                 padding: .2rem;
-
+            }
+            @media @phone{
+                width: 65%;
             }
             img{
                 width: 85%;
@@ -184,6 +215,11 @@
                 font-size: .5rem;
                 padding: 1rem .5rem;
             }
+            @media @phone{
+                width: 100%;
+                line-height: 1rem;
+                font-size: .7rem;
+            }
             span{
                 font-weight: bold;
                 color: @mm-theme-lightblue;
@@ -206,7 +242,10 @@
         justify-content: space-between;
         margin: 0;
     }
-    .dot {
+    @media @phone{
+        width: 12%;
+    }
+    .dot, .dot2{
         cursor: pointer;
         width: 10rem;
         height: 6rem;
@@ -215,12 +254,17 @@
         background-color: white;
         // border-radius: 50%;
         display: inline-block;
-        // border: @standard-border;
+        border: @standard-border;
         @media @tablet{
             width: 8rem;
             height: 4.6rem;
             padding-top: .5rem;
             margin: 0;
+        }
+        @media @phone{
+            width: 100%;
+            height: 10%;
+            margin-top: 40%;
         }
         &:hover{
             background-color: @mm-button-select;
@@ -228,9 +272,24 @@
         }
         img{
             width: 100%;
+            @media @phone{
+                // margin-top: .2rem;
+                height: 100%;
+            }
         }
     }
-    .dot:first-child{
+    .dot{
+        @media @phone{
+            display: none;   
+        }
+    }
+    .dot2{
+        display: none;
+        @media @phone{
+            display: block;
+        }
+    }
+    .first-dot{
         background-color: green;
     }
 }
